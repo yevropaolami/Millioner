@@ -1,7 +1,7 @@
 {
  "id": "/",
- "name": "YEVROPA OLAMI MILLIONER",
- "short_name": "YEVROPA OLAMI",
+ "name": "MILLIONER №1",
+ "short_name": "MILLIONER №1",
  "description": "Yevropa, O‘zbekiston va yo‘l harakati qoidalari bo‘yicha bilimlar viktorinasi",
  "lang": "uz",
  "start_url": "./",
@@ -28,7 +28,7 @@
    "purpose": "any"
   },
   {
-   "src": "icon-512.png",
+   "src": "icon-maskable-512.png",
    "sizes": "512x512",
    "type": "image/png",
    "purpose": "maskable"
