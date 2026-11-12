@@ -1,5 +1,5 @@
 /* YEVROPA OLAMI MILLIONER service worker. Bump CACHE when you upload a new version. */
-const CACHE='yom-v179';
+const CACHE='yom-v182';
 const SHELL=['./','index.html','questions.js','questions-extra.js','manifest.webmanifest','icon-192.png','icon-512.png','favicon.png','apple-touch-icon.png','icon-maskable-512.png','privacy.html'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
