@@ -1,5 +1,5 @@
 /* YEVROPA OLAMI MILLIONER service worker. Network-first: new versions reach players at once; cache is only for offline. */
-const CACHE='yom-v209';
+const CACHE='yom-v214';
 const SHELL=['./','index.html','questions.js','questions-extra.js','manifest.webmanifest','icon-192.png','icon-512.png','favicon.png','apple-touch-icon.png','icon-maskable-512.png','privacy.html'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>Promise.all(SHELL.map(u=>fetch(u,{cache:'reload'}).then(r=>r.ok&&c.put(u,r)).catch(()=>{})))).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
